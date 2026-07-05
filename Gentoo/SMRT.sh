@@ -77,7 +77,7 @@ allocate_cores() {
     echo "$selected_cores"
 }
 
-PCT="${1:-${SMRT_LAST_PCT:-75}}"
+PCT="${1:-${SMRT_LAST_PCT:-100}}"
 if ! [[ "$PCT" =~ ^[0-9]+$ ]] || (( PCT < 1 || PCT > 100 )); then
     echo "${RED}Error: Please provide a percentage between 1 and 100${RESET}"
     exit 1
